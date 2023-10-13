@@ -11,6 +11,7 @@ public class EnemyBehaviour : MonoBehaviour
     private Animator animator;
     private SpriteRenderer spriteRenderer;
     private AudioSource audioSource;
+
     private Vector2 playerPosition;
 
     private void Awake()

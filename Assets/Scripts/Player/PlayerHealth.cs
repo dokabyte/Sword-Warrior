@@ -4,26 +4,25 @@ using UnityEngine;
 
 public class PlayerHealth : MonoBehaviour
 {
-
     public int health;
     public int maxHealth = 10;
 
-    public SpriteRenderer playerSr;
-    public PlayerBehaviour playerBehaviour;
+    public SpriteRenderer playerSR;
+    public PlayerBehaviour PlayerBehaviour;
     // Start is called before the first frame update
     void Start()
     {
         health = maxHealth;
     }
 
-
     public void TakeDamage(int amount)
     {
         health -= amount;
-        if (health <= 0)
+        if(health <= 0)
         {
-            playerSr.enabled = false;
-            playerBehaviour.enabled = false;
+            playerSR.enabled = false;
+            PlayerBehaviour.enabled = false;
         }
+
     }
 }

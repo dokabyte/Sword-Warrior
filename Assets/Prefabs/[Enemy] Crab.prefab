@@ -15,7 +15,6 @@ GameObject:
   - component: {fileID: 2243773213199168049}
   - component: {fileID: 2390243408509148491}
   - component: {fileID: 7725744334761635000}
-  - component: {fileID: -6015801928006742860}
   m_Layer: 6
   m_Name: '[Enemy] Crab'
   m_TagString: Untagged
@@ -296,16 +295,3 @@ MonoBehaviour:
   enemySounds:
   - {fileID: 8300000, guid: 3f134aa59f4348d4193917e62328a807, type: 3}
   - {fileID: 8300000, guid: cb5067613793c8e4f8b2e66c4cc92604, type: 3}
---- !u!114 &-6015801928006742860
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6913542686639999452}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9457b7445064bf344a22e3fa506f2389, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _damageAmount: 10
