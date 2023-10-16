@@ -61,9 +61,9 @@ public class EnemyBehaviour : MonoBehaviour
         }
     }
 
-    private void SetIsMovingAnimParameter(bool isMoving)
+    private void SetIsMovingAnimParameter(bool Moving)
     {
-        animator.SetBool("isMoving", isMoving);
+        animator.SetBool("Moving", Moving);
     }
 
     private void PlayWalkSound()
