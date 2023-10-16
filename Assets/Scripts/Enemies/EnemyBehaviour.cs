@@ -1,11 +1,14 @@
 using System;
 using System.Collections;
 using UnityEngine;
+using UnityEngine.SceneManagement;
+
 public class EnemyBehaviour : MonoBehaviour
 {
     [SerializeField, Range(0f, 10f)] private float velocity;
     [SerializeField] private float distanceThreshold;
     [SerializeField] private AudioClip[] enemySounds;
+    private ScoreManager scoreManager;
 
     private Rigidbody2D rigidbody;
     private Animator animator;
@@ -14,6 +17,8 @@ public class EnemyBehaviour : MonoBehaviour
 
     private Vector2 playerPosition;
 
+    
+    
     private void Awake()
     {
         rigidbody = GetComponent<Rigidbody2D>();
@@ -21,6 +26,7 @@ public class EnemyBehaviour : MonoBehaviour
         spriteRenderer = GetComponent<SpriteRenderer>();
         audioSource = GetComponent<AudioSource>();
     }
+
 
     private void Update()
     {
@@ -40,6 +46,8 @@ public class EnemyBehaviour : MonoBehaviour
         CheckEnemySprite();
         print("enemy sprite velocity: " + rigidbody.velocity.x);
     }
+
+
 
     private void CheckEnemySprite()
     {
@@ -84,4 +92,7 @@ public class EnemyBehaviour : MonoBehaviour
     {
         animator.SetTrigger("onDeath");
     }
+
+
 }
+
