@@ -1,21 +1,28 @@
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
 public class ScoreManager : MonoBehaviour
 {
-    public Text scoreText;
-    private int score = 0;
+    public static ScoreManager instance;
+  [SerializeField] private TextMeshProUGUI scoreText;
+    private int score = 1;
+
+    private void Awake()
+    {
+        instance = this;
+    }
 
     // Method to increase the score
     public void IncreaseScore()
     {
         score++;
-        UpdateScoreText();
+        UpdateScoreText(score);
     }
 
     // Method to update the score text on the screen
-    private void UpdateScoreText()
+    public void UpdateScoreText(int score)
     {
-        scoreText.text = "Score: " + score;
+        scoreText.text = score.ToString();
     }
 }

@@ -86,6 +86,7 @@ public class EnemyBehaviour : MonoBehaviour
     {
         yield return new WaitForSeconds(0.35f);
         Destroy(this.gameObject);
+        ScoreManager.instance.IncreaseScore();
     }
 
     private void StartDeathAnim()
